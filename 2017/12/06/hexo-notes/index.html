@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="docker,srcms," />
 
 
 
@@ -79,17 +79,22 @@
 
 
 
-<meta name="description" content="信息安全笔记">
+<meta name="description" content="0x01 构建 lamp Dcokerfile首页，我们需要有构建一个lamp 运行环境。  Dockerfile  123456789101112131415161718192021222324252627282930313233343536373839404142434445# 基础镜像为ubuntu:14.04FROM ubuntu:14.04# 作者为liusecMAINTAINER li">
+<meta name="keywords" content="docker,srcms">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo notes">
+<meta property="og:title" content="使用Docker 部署 SRCMS">
 <meta property="og:url" content="https://liusec.github.io/2017/12/06/hexo-notes/index.html">
 <meta property="og:site_name" content="liusec&#39;s blog">
-<meta property="og:description" content="信息安全笔记">
+<meta property="og:description" content="0x01 构建 lamp Dcokerfile首页，我们需要有构建一个lamp 运行环境。  Dockerfile  123456789101112131415161718192021222324252627282930313233343536373839404142434445# 基础镜像为ubuntu:14.04FROM ubuntu:14.04# 作者为liusecMAINTAINER li">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-06T15:36:08.000Z">
+<meta property="og:image" content="http://p0naohs8x.bkt.clouddn.com/phpinfo.png">
+<meta property="og:image" content="http://p0naohs8x.bkt.clouddn.com/srcms_index.png">
+<meta property="og:image" content="https://liusec.github.io/2017/12/06/hexo-notes/srcms_index.png">
+<meta property="og:updated_time" content="2017-12-08T13:19:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo notes">
-<meta name="twitter:description" content="信息安全笔记">
+<meta name="twitter:title" content="使用Docker 部署 SRCMS">
+<meta name="twitter:description" content="0x01 构建 lamp Dcokerfile首页，我们需要有构建一个lamp 运行环境。  Dockerfile  123456789101112131415161718192021222324252627282930313233343536373839404142434445# 基础镜像为ubuntu:14.04FROM ubuntu:14.04# 作者为liusecMAINTAINER li">
+<meta name="twitter:image" content="http://p0naohs8x.bkt.clouddn.com/phpinfo.png">
 
 
 
@@ -125,7 +130,7 @@
 
 
 
-  <title>hexo notes | liusec's blog</title>
+  <title>使用Docker 部署 SRCMS | liusec's blog</title>
   
 
 
@@ -279,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo notes</h1>
+          <h1 class="post-title" itemprop="name headline">使用Docker 部署 SRCMS</h1>
         
 
         <div class="post-meta">
@@ -302,6 +307,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/日记/" itemprop="url" rel="index">
+                    <span itemprop="name">日记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -309,7 +336,7 @@
 
           
           
-             <span id="/2017/12/06/hexo-notes/" class="leancloud_visitors" data-flag-title="hexo notes">
+             <span id="/2017/12/06/hexo-notes/" class="leancloud_visitors" data-flag-title="使用Docker 部署 SRCMS">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -340,7 +367,57 @@
       
 
       
-        
+        <h2 id="0x01-构建-lamp-Dcokerfile"><a href="#0x01-构建-lamp-Dcokerfile" class="headerlink" title="0x01 构建 lamp Dcokerfile"></a>0x01 构建 lamp Dcokerfile</h2><p>首页，我们需要有构建一个lamp 运行环境。</p>
+<blockquote>
+<p>Dockerfile</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"># 基础镜像为ubuntu:14.04</span><br><span class="line">FROM ubuntu:14.04</span><br><span class="line"></span><br><span class="line"># 作者为liusec</span><br><span class="line">MAINTAINER liusec &lt;75065472@qq.com&gt;</span><br><span class="line"></span><br><span class="line"># 替换apt源: 将/etc/apt/sources.list文件中的archive.ubuntu.com替换为mirrors.aliyun.com</span><br><span class="line">RUN sed -i &apos;s/archive.ubuntu.com/mirrors.aliyun.com/g&apos; /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line"># 设置环境变量: 将env环境变量中的TZ设置为Asia/Shanghai</span><br><span class="line">ENV TZ=Asia/Shanghai</span><br><span class="line"></span><br><span class="line"># (1)设置本地时间：强制为/usr/share/zoneinfo/Asia/Shanghai文件创建符号链接（软链接）为/etc/localtime，-f为force</span><br><span class="line"># (2)设置时区：向文件/etc/timezone中写入字符串‘Asia/Shanghai’,更改时区为上海</span><br><span class="line">RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;&amp; echo $TZ &gt; /etc/timezone</span><br><span class="line"></span><br><span class="line"># 更新源</span><br><span class="line">RUN apt-get update -y</span><br><span class="line"></span><br><span class="line"># 安装apache、vim、bash-completion、unzip</span><br><span class="line">RUN apt-get install -y apache2 vim bash-completion unzip</span><br><span class="line"># 创建文件夹/var/lock/apache2 、/var/run/apache2</span><br><span class="line">RUN mkdir -p /var/lock/apache2 /var/run/apache2</span><br><span class="line"></span><br><span class="line"># 安装mysql-client、 mysql-server; 启动mysql服务; 设置mysql密码</span><br><span class="line">RUN apt-get install -y mysql-client mysql-server \</span><br><span class="line">    &amp;&amp; /etc/init.d/mysql start \</span><br><span class="line">    &amp;&amp; mysqladmin -u root password &quot;root&quot;</span><br><span class="line"></span><br><span class="line"># 安装php</span><br><span class="line">RUN apt-get install -y php5 php5-mysql php5-dev php5-gd php5-memcache php5-pspell php5-snmp snmp php5-xmlrpc libapache2-mod-php5 php5-cli</span><br><span class="line"># RUN yum install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 拷贝phpinfo.php 到docker镜像的/var/www/html/下</span><br><span class="line">COPY src/phpinfo.php /var/www/html/</span><br><span class="line"># 拷贝启动脚本start.sh 到docker镜像的根目录下</span><br><span class="line">COPY src/start.sh /start.sh</span><br><span class="line"># 增加启动脚本start.sh 所有用户和组的执行权限</span><br><span class="line">RUN chmod a+x /start.sh</span><br><span class="line"></span><br><span class="line"># 只开放了80 443端口的映射访问权限</span><br><span class="line">EXPOSE 80 443</span><br><span class="line"># 运行后默认执行start.sh启动脚本</span><br><span class="line">CMD [&quot;/start.sh&quot;]</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>src/start.sh</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">/etc/init.d/mysql start</span><br><span class="line">/etc/init.d/apache2 restart</span><br><span class="line">/usr/bin/tail -f /dev/null</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>src/phpinfo.php</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">phpinfo();</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="0x02-生成镜像，启动容器"><a href="#0x02-生成镜像，启动容器" class="headerlink" title="0x02 生成镜像，启动容器"></a>0x02 生成镜像，启动容器</h2><p>将以下文件push到github</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">├── Dcokerfile</span><br><span class="line">├── README.md</span><br><span class="line">└── src</span><br><span class="line">    ├── phpinfo.php</span><br><span class="line">    └── start.sh</span><br><span class="line"></span><br><span class="line">1 directory, 4 files</span><br></pre></td></tr></table></figure>
+<p>使用daocloud 自动构建，启动服务</p>
+<p><img src="http://p0naohs8x.bkt.clouddn.com/phpinfo.png" alt="phpinfo.png"></p>
+<h2 id="0x03-创建SRCMS-Docker-Image"><a href="#0x03-创建SRCMS-Docker-Image" class="headerlink" title="0x03 创建SRCMS Docker Image"></a>0x03 创建SRCMS Docker Image</h2><p>创建Dockerfile</p>
+<blockquote>
+<p>Dockerfile</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># 基础镜像为daocloud.io/liusheng/lamp</span><br><span class="line">FROM daocloud.io/liusheng/lamp:master-98827dc</span><br><span class="line"></span><br><span class="line"># 作者为liusec</span><br><span class="line">MAINTAINER liusec &lt;75065472@qq.com&gt;</span><br><span class="line"></span><br><span class="line">ARG SRCMS_URL=https://github.com/martinzhou2015/SRCMS/archive/master.zip</span><br><span class="line"></span><br><span class="line"># 解压srcms.zip 到 /var/www/html/下</span><br><span class="line">RUN set -x \</span><br><span class="line">    &amp;&amp; apt-get update \</span><br><span class="line">    &amp;&amp; apt-get install -y --force-yes wget \</span><br><span class="line">    &amp;&amp; wget -qO /tmp/srcms.zip $SRCMS_URL \</span><br><span class="line">    &amp;&amp; unzip -q /tmp/srcms.zip -d /tmp/ \</span><br><span class="line">    &amp;&amp; mv /tmp/SRCMS-master/* /var/www/html/ \</span><br><span class="line">    &amp;&amp; rm -rf /tmp/SRCMS-master</span><br><span class="line"></span><br><span class="line"># 创建数据库srcms ，导入sql</span><br><span class="line"># 修改接收邮件的邮箱</span><br><span class="line">RUN set -x \</span><br><span class="line">    &amp;&amp; chown -R www-data:www-data /var/www/html/ \</span><br><span class="line">    &amp;&amp; /etc/init.d/mysql start \</span><br><span class="line">    &amp;&amp; mysql -e &quot;CREATE DATABASE srcms DEFAULT CHARACTER SET utf8;&quot; -uroot -proot \</span><br><span class="line">    &amp;&amp; mysql -e &quot;use srcms;source /var/www/html/DB/srcms.sql;&quot; -uroot -proot \</span><br><span class="line">    &amp;&amp; rm -f /var/www/html/DB/srcms.sql \</span><br><span class="line">    &amp;&amp; sed -i &apos;s/1009465756@qq.com/75065472@qq.com/g&apos; /var/www/html/Application/User/Controller/PostController.class.php</span><br><span class="line"></span><br><span class="line">COPY src/start.sh /start.sh</span><br><span class="line">RUN chmod a+x /start.sh</span><br><span class="line"></span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>src/start.sh</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">/etc/init.d/mysql restart</span><br><span class="line">/etc/init.d/apache2 restart</span><br><span class="line">/usr/bin/tail -f /dev/null</span><br></pre></td></tr></table></figure>
+<h2 id="0x04-生成镜像，启动运行"><a href="#0x04-生成镜像，启动运行" class="headerlink" title="0x04 生成镜像，启动运行"></a>0x04 生成镜像，启动运行</h2><h3 id="4-1-在云端启动docker容器"><a href="#4-1-在云端启动docker容器" class="headerlink" title="4.1 在云端启动docker容器"></a>4.1 在云端启动docker容器</h3><p>将上面所说文件push到github</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">├── Dockerfile</span><br><span class="line">├── README.md</span><br><span class="line">└── src</span><br><span class="line">    └── start.sh</span><br><span class="line"></span><br><span class="line">1 directory, 3 files</span><br></pre></td></tr></table></figure>
+<p>使用daocloud 自动构建，启动服务</p>
+<p><img src="http://p0naohs8x.bkt.clouddn.com/srcms_index.png" alt="srcms_index.png"></p>
+<h3 id="4-2-在本地启动docker容器"><a href="#4-2-在本地启动docker容器" class="headerlink" title="4.2 在本地启动docker容器"></a>4.2 在本地启动docker容器</h3><p>不会在daocloud运行的小伙伴，可以将docker镜像拉取到本地启动，方法如下</p>
+<h4 id="获取环境"><a href="#获取环境" class="headerlink" title="获取环境:"></a>获取环境:</h4><ol>
+<li><p>拉取镜像到本地</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull daocloud.io/liusheng/srcms_docker:latest</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d -p 8000:80 daocloud.io/liusheng/srcms_docker:latest</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>-p 8000:80</code> 前面的 8000 代表物理机的端口，可随意指定。 </p>
+</blockquote>
+</li>
+<li><p>访问SRCMS</p>
+</li>
+</ol>
+<p><a href="http://127.0.0.1:8000/index.php" target="_blank" rel="noopener">http://127.0.0.1:8000/index.php</a></p>
+<p><img src="/2017/12/06/hexo-notes/srcms_index.png" alt="srcms_index.png"></p>
+<blockquote>
+<p>本项目github地址：</p>
+</blockquote>
+<p><a href="https://github.com/liusec/srcms_docker" target="_blank" rel="noopener">https://github.com/liusec/srcms_docker</a></p>
+
       
     </div>
     
@@ -354,6 +431,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/docker/" rel="tag"># docker</a>
+          
+            <a href="/tags/srcms/" rel="tag"># srcms</a>
+          
+        </div>
       
 
       
@@ -428,8 +513,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -455,7 +549,25 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
@@ -477,6 +589,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-构建-lamp-Dcokerfile"><span class="nav-number">1.</span> <span class="nav-text"><a href="#0x01-&#x6784;&#x5EFA;-lamp-Dcokerfile" class="headerlink" title="0x01 &#x6784;&#x5EFA; lamp Dcokerfile"></a>0x01 &#x6784;&#x5EFA; lamp Dcokerfile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-生成镜像，启动容器"><span class="nav-number">2.</span> <span class="nav-text"><a href="#0x02-&#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x5BB9;&#x5668;" class="headerlink" title="0x02 &#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x5BB9;&#x5668;"></a>0x02 &#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x5BB9;&#x5668;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-创建SRCMS-Docker-Image"><span class="nav-number">3.</span> <span class="nav-text"><a href="#0x03-&#x521B;&#x5EFA;SRCMS-Docker-Image" class="headerlink" title="0x03 &#x521B;&#x5EFA;SRCMS Docker Image"></a>0x03 &#x521B;&#x5EFA;SRCMS Docker Image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04-生成镜像，启动运行"><span class="nav-number">4.</span> <span class="nav-text"><a href="#0x04-&#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x8FD0;&#x884C;" class="headerlink" title="0x04 &#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x8FD0;&#x884C;"></a>0x04 &#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x8FD0;&#x884C;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-在云端启动docker容器"><span class="nav-number">4.1.</span> <span class="nav-text"><a href="#4-1-&#x5728;&#x4E91;&#x7AEF;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;" class="headerlink" title="4.1 &#x5728;&#x4E91;&#x7AEF;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;"></a>4.1 &#x5728;&#x4E91;&#x7AEF;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-在本地启动docker容器"><span class="nav-number">4.2.</span> <span class="nav-text"><a href="#4-2-&#x5728;&#x672C;&#x5730;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;" class="headerlink" title="4.2 &#x5728;&#x672C;&#x5730;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;"></a>4.2 &#x5728;&#x672C;&#x5730;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取环境"><span class="nav-number">4.2.1.</span> <span class="nav-text"><a href="#&#x83B7;&#x53D6;&#x73AF;&#x5883;" class="headerlink" title="&#x83B7;&#x53D6;&#x73AF;&#x5883;:"></a>&#x83B7;&#x53D6;&#x73AF;&#x5883;:</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
