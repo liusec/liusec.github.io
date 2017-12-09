@@ -81,21 +81,21 @@
 
 
 
-<meta name="description" content="0x01 构建 lamp Dcokerfile首先，我们需要有构建一个lamp 运行环境。  Dockerfile  123456789101112131415161718192021222324252627282930313233343536373839404142434445# 基础镜像为ubuntu:14.04FROM ubuntu:14.04# 作者为liusecMAINTAINER li">
+<meta name="description" content="0x01 SRCMS 介绍 SRCMS 是一款安全应急响应与缺陷管理软件，致力于为大、中、小企业和组织提供“最敏捷、安全和美观的安全应急响应中心的建站解决方案，帮助企业建立属于自己的安全应急响应中心和体系”。有了SRCMS，您就可以像使用Discuz!搭建论坛一样容易，为您的企业建立安全应急响应中心平台。 官网：  https://www.plusecurity.cn/srcms.html  gi">
 <meta name="keywords" content="docker,srcms">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Docker 部署 SRCMS">
 <meta property="og:url" content="https://liusec.github.io/2017/12/08/使用Docker 部署 SRCMS/index.html">
 <meta property="og:site_name" content="liusec&#39;s blog">
-<meta property="og:description" content="0x01 构建 lamp Dcokerfile首先，我们需要有构建一个lamp 运行环境。  Dockerfile  123456789101112131415161718192021222324252627282930313233343536373839404142434445# 基础镜像为ubuntu:14.04FROM ubuntu:14.04# 作者为liusecMAINTAINER li">
+<meta property="og:description" content="0x01 SRCMS 介绍 SRCMS 是一款安全应急响应与缺陷管理软件，致力于为大、中、小企业和组织提供“最敏捷、安全和美观的安全应急响应中心的建站解决方案，帮助企业建立属于自己的安全应急响应中心和体系”。有了SRCMS，您就可以像使用Discuz!搭建论坛一样容易，为您的企业建立安全应急响应中心平台。 官网：  https://www.plusecurity.cn/srcms.html  gi">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p0naohs8x.bkt.clouddn.com/phpinfo.png">
 <meta property="og:image" content="http://p0naohs8x.bkt.clouddn.com/srcms_index.png">
 <meta property="og:image" content="http://p0naohs8x.bkt.clouddn.com/srcms_index.png">
-<meta property="og:updated_time" content="2017-12-08T14:22:51.000Z">
+<meta property="og:updated_time" content="2017-12-09T03:37:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Docker 部署 SRCMS">
-<meta name="twitter:description" content="0x01 构建 lamp Dcokerfile首先，我们需要有构建一个lamp 运行环境。  Dockerfile  123456789101112131415161718192021222324252627282930313233343536373839404142434445# 基础镜像为ubuntu:14.04FROM ubuntu:14.04# 作者为liusecMAINTAINER li">
+<meta name="twitter:description" content="0x01 SRCMS 介绍 SRCMS 是一款安全应急响应与缺陷管理软件，致力于为大、中、小企业和组织提供“最敏捷、安全和美观的安全应急响应中心的建站解决方案，帮助企业建立属于自己的安全应急响应中心和体系”。有了SRCMS，您就可以像使用Discuz!搭建论坛一样容易，为您的企业建立安全应急响应中心平台。 官网：  https://www.plusecurity.cn/srcms.html  gi">
 <meta name="twitter:image" content="http://p0naohs8x.bkt.clouddn.com/phpinfo.png">
 
 
@@ -389,7 +389,18 @@
       
 
       
-        <h2 id="0x01-构建-lamp-Dcokerfile"><a href="#0x01-构建-lamp-Dcokerfile" class="headerlink" title="0x01 构建 lamp Dcokerfile"></a>0x01 构建 lamp Dcokerfile</h2><p>首先，我们需要有构建一个lamp 运行环境。</p>
+        <h2 id="0x01-SRCMS-介绍"><a href="#0x01-SRCMS-介绍" class="headerlink" title="0x01 SRCMS 介绍"></a>0x01 SRCMS 介绍</h2><blockquote>
+<p>SRCMS 是一款安全应急响应与缺陷管理软件，致力于为大、中、小企业和组织提供“最敏捷、安全和美观的安全应急响应中心的建站解决方案，帮助企业建立属于自己的安全应急响应中心和体系”。有了SRCMS，您就可以像使用Discuz!搭建论坛一样容易，为您的企业建立安全应急响应中心平台。</p>
+<p>官网：</p>
+<blockquote>
+<p><a href="https://www.plusecurity.cn/srcms.html" target="_blank" rel="noopener">https://www.plusecurity.cn/srcms.html</a></p>
+</blockquote>
+<p>github地址：</p>
+<blockquote>
+<p><a href="https://github.com/martinzhou2015/SRCMS" target="_blank" rel="noopener">https://github.com/martinzhou2015/SRCMS</a></p>
+</blockquote>
+</blockquote>
+<h2 id="0x02-构建-lamp-Dcokerfile"><a href="#0x02-构建-lamp-Dcokerfile" class="headerlink" title="0x02 构建 lamp Dcokerfile"></a>0x02 构建 lamp Dcokerfile</h2><p>首先，我们需要有构建一个lamp 运行环境。</p>
 <blockquote>
 <p>Dockerfile</p>
 </blockquote>
@@ -402,11 +413,28 @@
 <p>src/phpinfo.php</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">phpinfo();</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="0x02-生成镜像，启动容器"><a href="#0x02-生成镜像，启动容器" class="headerlink" title="0x02 生成镜像，启动容器"></a>0x02 生成镜像，启动容器</h2><p>将以下文件push到github</p>
+<h2 id="0x03-生成镜像，启动容器"><a href="#0x03-生成镜像，启动容器" class="headerlink" title="0x03 生成镜像，启动容器"></a>0x03 生成镜像，启动容器</h2><h3 id="3-1-在daocloud云端构建和启动容器"><a href="#3-1-在daocloud云端构建和启动容器" class="headerlink" title="3.1 在daocloud云端构建和启动容器"></a>3.1 在daocloud云端构建和启动容器</h3><p>将上述文件push到github项目中，lamp项目地址：</p>
+<p><a href="https://github.com/liusec/lamp" target="_blank" rel="noopener">https://github.com/liusec/lamp</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">├── Dcokerfile</span><br><span class="line">├── README.md</span><br><span class="line">└── src</span><br><span class="line">    ├── phpinfo.php</span><br><span class="line">    └── start.sh</span><br><span class="line"></span><br><span class="line">1 directory, 4 files</span><br></pre></td></tr></table></figure>
-<p>使用daocloud 自动构建，启动服务</p>
+<p>使用daocloud 关联github，自动构建lamp镜像，使用构建好的镜像启动容器进行测试。</p>
+<p>daocloud 云端测试截图：</p>
 <p><img src="http://p0naohs8x.bkt.clouddn.com/phpinfo.png" alt="phpinfo.png"></p>
-<h2 id="0x03-创建SRCMS-Docker-Image"><a href="#0x03-创建SRCMS-Docker-Image" class="headerlink" title="0x03 创建SRCMS Docker Image"></a>0x03 创建SRCMS Docker Image</h2><p>创建Dockerfile</p>
+<h3 id="3-2-本地启动lamp容器测试"><a href="#3-2-本地启动lamp容器测试" class="headerlink" title="3.2 本地启动lamp容器测试"></a>3.2 本地启动lamp容器测试</h3><p>构建好的docker镜像已设置公开访问，希望在本地测试的小伙伴可以使用下面方法。</p>
+<ol>
+<li><p>拉取镜像到本地</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull daocloud.io/liusheng/lamp:master-98827dc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d -p 8000:80 daocloud.io/liusheng/srcms_docker:latest</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><code>-p 8000:80</code> 前面的 8000 代表物理机的端口，可随意指定。</p>
+</blockquote>
+</li>
+<li><p>访问测试</p>
+<p><a href="http://127.0.0.1:8000/phpinfo.php" target="_blank" rel="noopener">http://127.0.0.1:8000/phpinfo.php</a></p>
+</li>
+</ol>
+<h2 id="0x04-创建srcms-docker-image"><a href="#0x04-创建srcms-docker-image" class="headerlink" title="0x04 创建srcms docker image"></a>0x04 创建srcms docker image</h2><p>在上一步lamp镜像的基础上，创建srcms的Dockerfile</p>
 <blockquote>
 <p>Dockerfile</p>
 </blockquote>
@@ -415,12 +443,13 @@
 <p>src/start.sh</p>
 </blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">/etc/init.d/mysql restart</span><br><span class="line">/etc/init.d/apache2 restart</span><br><span class="line">/usr/bin/tail -f /dev/null</span><br></pre></td></tr></table></figure>
-<h2 id="0x04-生成镜像，启动运行"><a href="#0x04-生成镜像，启动运行" class="headerlink" title="0x04 生成镜像，启动运行"></a>0x04 生成镜像，启动运行</h2><h3 id="4-1-在云端启动docker容器"><a href="#4-1-在云端启动docker容器" class="headerlink" title="4.1 在云端启动docker容器"></a>4.1 在云端启动docker容器</h3><p>将上面所说文件push到github</p>
+<h2 id="0x05-生成镜像，启动运行"><a href="#0x05-生成镜像，启动运行" class="headerlink" title="0x05 生成镜像，启动运行"></a>0x05 生成镜像，启动运行</h2><h3 id="5-1-在云端启动docker容器"><a href="#5-1-在云端启动docker容器" class="headerlink" title="5.1 在云端启动docker容器"></a>5.1 在云端启动docker容器</h3><p>将上面所述文件push到github项目,srcms_docker项目地址：</p>
+<p><a href="https://github.com/liusec/srcms_docker" target="_blank" rel="noopener">https://github.com/liusec/srcms_docker</a></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">├── Dockerfile</span><br><span class="line">├── README.md</span><br><span class="line">└── src</span><br><span class="line">    └── start.sh</span><br><span class="line"></span><br><span class="line">1 directory, 3 files</span><br></pre></td></tr></table></figure>
 <p>使用daocloud 自动构建，启动服务</p>
 <p><img src="http://p0naohs8x.bkt.clouddn.com/srcms_index.png" alt="srcms_index.png"></p>
-<h3 id="4-2-在本地启动docker容器"><a href="#4-2-在本地启动docker容器" class="headerlink" title="4.2 在本地启动docker容器"></a>4.2 在本地启动docker容器</h3><p>不会在daocloud运行的小伙伴，可以将docker镜像拉取到本地启动，方法如下</p>
-<h4 id="获取环境"><a href="#获取环境" class="headerlink" title="获取环境:"></a>获取环境:</h4><ol>
+<h3 id="5-2-在本地启动docker容器"><a href="#5-2-在本地启动docker容器" class="headerlink" title="5.2 在本地启动docker容器"></a>5.2 在本地启动docker容器</h3><p>希望在本地部署的小伙伴可以将docker镜像拉取到本地启动，方法如下</p>
+<ol>
 <li><p>拉取镜像到本地</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull daocloud.io/liusheng/srcms_docker:latest</span><br></pre></td></tr></table></figure>
 </li>
@@ -431,14 +460,10 @@
 </blockquote>
 </li>
 <li><p>访问SRCMS</p>
-</li>
-</ol>
 <p><a href="http://127.0.0.1:8000/index.php" target="_blank" rel="noopener">http://127.0.0.1:8000/index.php</a></p>
 <p><img src="http://p0naohs8x.bkt.clouddn.com/srcms_index.png" alt="srcms_index.png"></p>
-<blockquote>
-<p>本项目github地址：</p>
-</blockquote>
-<p><a href="https://github.com/liusec/srcms_docker" target="_blank" rel="noopener">https://github.com/liusec/srcms_docker</a></p>
+</li>
+</ol>
 
       
     </div>
@@ -608,7 +633,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-构建-lamp-Dcokerfile"><span class="nav-number">1.</span> <span class="nav-text"><a href="#0x01-&#x6784;&#x5EFA;-lamp-Dcokerfile" class="headerlink" title="0x01 &#x6784;&#x5EFA; lamp Dcokerfile"></a>0x01 &#x6784;&#x5EFA; lamp Dcokerfile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-生成镜像，启动容器"><span class="nav-number">2.</span> <span class="nav-text"><a href="#0x02-&#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x5BB9;&#x5668;" class="headerlink" title="0x02 &#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x5BB9;&#x5668;"></a>0x02 &#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x5BB9;&#x5668;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-创建SRCMS-Docker-Image"><span class="nav-number">3.</span> <span class="nav-text"><a href="#0x03-&#x521B;&#x5EFA;SRCMS-Docker-Image" class="headerlink" title="0x03 &#x521B;&#x5EFA;SRCMS Docker Image"></a>0x03 &#x521B;&#x5EFA;SRCMS Docker Image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04-生成镜像，启动运行"><span class="nav-number">4.</span> <span class="nav-text"><a href="#0x04-&#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x8FD0;&#x884C;" class="headerlink" title="0x04 &#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x8FD0;&#x884C;"></a>0x04 &#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x8FD0;&#x884C;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-在云端启动docker容器"><span class="nav-number">4.1.</span> <span class="nav-text"><a href="#4-1-&#x5728;&#x4E91;&#x7AEF;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;" class="headerlink" title="4.1 &#x5728;&#x4E91;&#x7AEF;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;"></a>4.1 &#x5728;&#x4E91;&#x7AEF;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-在本地启动docker容器"><span class="nav-number">4.2.</span> <span class="nav-text"><a href="#4-2-&#x5728;&#x672C;&#x5730;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;" class="headerlink" title="4.2 &#x5728;&#x672C;&#x5730;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;"></a>4.2 &#x5728;&#x672C;&#x5730;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#获取环境"><span class="nav-number">4.2.1.</span> <span class="nav-text"><a href="#&#x83B7;&#x53D6;&#x73AF;&#x5883;" class="headerlink" title="&#x83B7;&#x53D6;&#x73AF;&#x5883;:"></a>&#x83B7;&#x53D6;&#x73AF;&#x5883;:</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-SRCMS-介绍"><span class="nav-number">1.</span> <span class="nav-text"><a href="#0x01-SRCMS-&#x4ECB;&#x7ECD;" class="headerlink" title="0x01 SRCMS &#x4ECB;&#x7ECD;"></a>0x01 SRCMS &#x4ECB;&#x7ECD;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-构建-lamp-Dcokerfile"><span class="nav-number">2.</span> <span class="nav-text"><a href="#0x02-&#x6784;&#x5EFA;-lamp-Dcokerfile" class="headerlink" title="0x02 &#x6784;&#x5EFA; lamp Dcokerfile"></a>0x02 &#x6784;&#x5EFA; lamp Dcokerfile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-生成镜像，启动容器"><span class="nav-number">3.</span> <span class="nav-text"><a href="#0x03-&#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x5BB9;&#x5668;" class="headerlink" title="0x03 &#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x5BB9;&#x5668;"></a>0x03 &#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x5BB9;&#x5668;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-在daocloud云端构建和启动容器"><span class="nav-number">3.1.</span> <span class="nav-text"><a href="#3-1-&#x5728;daocloud&#x4E91;&#x7AEF;&#x6784;&#x5EFA;&#x548C;&#x542F;&#x52A8;&#x5BB9;&#x5668;" class="headerlink" title="3.1 &#x5728;daocloud&#x4E91;&#x7AEF;&#x6784;&#x5EFA;&#x548C;&#x542F;&#x52A8;&#x5BB9;&#x5668;"></a>3.1 &#x5728;daocloud&#x4E91;&#x7AEF;&#x6784;&#x5EFA;&#x548C;&#x542F;&#x52A8;&#x5BB9;&#x5668;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-本地启动lamp容器测试"><span class="nav-number">3.2.</span> <span class="nav-text"><a href="#3-2-&#x672C;&#x5730;&#x542F;&#x52A8;lamp&#x5BB9;&#x5668;&#x6D4B;&#x8BD5;" class="headerlink" title="3.2 &#x672C;&#x5730;&#x542F;&#x52A8;lamp&#x5BB9;&#x5668;&#x6D4B;&#x8BD5;"></a>3.2 &#x672C;&#x5730;&#x542F;&#x52A8;lamp&#x5BB9;&#x5668;&#x6D4B;&#x8BD5;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04-创建srcms-docker-image"><span class="nav-number">4.</span> <span class="nav-text"><a href="#0x04-&#x521B;&#x5EFA;srcms-docker-image" class="headerlink" title="0x04 &#x521B;&#x5EFA;srcms docker image"></a>0x04 &#x521B;&#x5EFA;srcms docker image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x05-生成镜像，启动运行"><span class="nav-number">5.</span> <span class="nav-text"><a href="#0x05-&#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x8FD0;&#x884C;" class="headerlink" title="0x05 &#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x8FD0;&#x884C;"></a>0x05 &#x751F;&#x6210;&#x955C;&#x50CF;&#xFF0C;&#x542F;&#x52A8;&#x8FD0;&#x884C;</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-在云端启动docker容器"><span class="nav-number">5.1.</span> <span class="nav-text"><a href="#5-1-&#x5728;&#x4E91;&#x7AEF;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;" class="headerlink" title="5.1 &#x5728;&#x4E91;&#x7AEF;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;"></a>5.1 &#x5728;&#x4E91;&#x7AEF;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-在本地启动docker容器"><span class="nav-number">5.2.</span> <span class="nav-text"><a href="#5-2-&#x5728;&#x672C;&#x5730;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;" class="headerlink" title="5.2 &#x5728;&#x672C;&#x5730;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;"></a>5.2 &#x5728;&#x672C;&#x5730;&#x542F;&#x52A8;docker&#x5BB9;&#x5668;</span></a></li></ol></li></ol></div>
             
 
           </div>
