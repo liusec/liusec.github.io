@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="编码,代码审计," />
 
 
 
@@ -82,16 +82,20 @@
 
 
 
-<meta name="description" content="信息安全笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="liusec&#39;s blog">
-<meta property="og:url" content="https://liusec.github.io/index.html">
+<meta name="description" content="0x01 常见编码类型常见编码：  ASCII GBK GB2312 UNICODE UTF-8 UTF-16 url编码 hex编码 base64编码  这篇文章不涉及url编码、hex编码、base64编码，后面有时间再补充。 0x02 ASCII所有信息最终都是一个二进制值。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就可以组合出256种状态，这被称为一个字节（byte） 一个">
+<meta name="keywords" content="编码,代码审计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编码转换">
+<meta property="og:url" content="https://liusec.github.io/2017/12/24/编码转换/index.html">
 <meta property="og:site_name" content="liusec&#39;s blog">
-<meta property="og:description" content="信息安全笔记">
+<meta property="og:description" content="0x01 常见编码类型常见编码：  ASCII GBK GB2312 UNICODE UTF-8 UTF-16 url编码 hex编码 base64编码  这篇文章不涉及url编码、hex编码、base64编码，后面有时间再补充。 0x02 ASCII所有信息最终都是一个二进制值。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就可以组合出256种状态，这被称为一个字节（byte） 一个">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://liusec.github.io/2017/12/24/编码转换/ASCII_Table.png">
+<meta property="og:updated_time" content="2017-12-24T00:57:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="liusec&#39;s blog">
-<meta name="twitter:description" content="信息安全笔记">
+<meta name="twitter:title" content="编码转换">
+<meta name="twitter:description" content="0x01 常见编码类型常见编码：  ASCII GBK GB2312 UNICODE UTF-8 UTF-16 url编码 hex编码 base64编码  这篇文章不涉及url编码、hex编码、base64编码，后面有时间再补充。 0x02 ASCII所有信息最终都是一个二进制值。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就可以组合出256种状态，这被称为一个字节（byte） 一个">
+<meta name="twitter:image" content="https://liusec.github.io/2017/12/24/编码转换/ASCII_Table.png">
 
 
 
@@ -121,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://liusec.github.io/"/>
+  <link rel="canonical" href="https://liusec.github.io/2017/12/24/编码转换/"/>
 
 
 
 
 
-  <title>liusec's blog</title>
+  <title>编码转换 | liusec's blog</title>
   
 
 
@@ -156,8 +160,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -270,9 +273,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -302,9 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/24/编码转换/" itemprop="url">编码转换</a></h1>
+          <h1 class="post-title" itemprop="name headline">编码转换</h1>
         
 
         <div class="post-meta">
@@ -398,9 +399,7 @@
       
 
       
-        
-          
-            <h1 id="0x01-常见编码类型"><a href="#0x01-常见编码类型" class="headerlink" title="0x01 常见编码类型"></a>0x01 常见编码类型</h1><p>常见编码：</p>
+        <h1 id="0x01-常见编码类型"><a href="#0x01-常见编码类型" class="headerlink" title="0x01 常见编码类型"></a>0x01 常见编码类型</h1><p>常见编码：</p>
 <ul>
 <li>ASCII</li>
 <li>GBK</li>
@@ -499,8 +498,6 @@
 <p><a href="http://wooyun.chamd5.org/bug_detail.php?wybug_id=wooyun-2014-048293" target="_blank" rel="noopener">建站之星模糊测试实战之任意文件上传漏洞</a></p>
 <h1 id="0x11-参考链接"><a href="#0x11-参考链接" class="headerlink" title="0x11 参考链接"></a>0x11 参考链接</h1><p><a href="http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html</a><br><a href="http://www.docin.com/p-178554948.html" target="_blank" rel="noopener">http://www.docin.com/p-178554948.html</a></p>
 
-          
-        
       
     </div>
     
@@ -515,241 +512,38 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liusec.github.io/2017/12/08/使用Docker 部署 SRCMS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="liusec">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="liusec's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/08/使用Docker 部署 SRCMS/" itemprop="url">使用Docker 部署 SRCMS</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-08T22:16:08+08:00">
-                2017-12-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/安全开发/" itemprop="url" rel="index">
-                    <span itemprop="name">安全开发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/编码/" rel="tag"># 编码</a>
           
-
+            <a href="/tags/代码审计/" rel="tag"># 代码审计</a>
           
-            
-          
-
-          
-          
-             <span id="/2017/12/08/使用Docker 部署 SRCMS/" class="leancloud_visitors" data-flag-title="使用Docker 部署 SRCMS">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="0x01-SRCMS-介绍"><a href="#0x01-SRCMS-介绍" class="headerlink" title="0x01 SRCMS 介绍"></a>0x01 SRCMS 介绍</h2><blockquote>
-<p>SRCMS 是一款安全应急响应与缺陷管理软件，致力于为大、中、小企业和组织提供“最敏捷、安全和美观的安全应急响应中心的建站解决方案，帮助企业建立属于自己的安全应急响应中心和体系”。有了SRCMS，您就可以像使用Discuz!搭建论坛一样容易，为您的企业建立安全应急响应中心平台。</p>
-<p>官网：</p>
-<blockquote>
-<p><a href="https://www.plusecurity.cn/srcms.html" target="_blank" rel="noopener">https://www.plusecurity.cn/srcms.html</a></p>
-</blockquote>
-<p>github地址：</p>
-<blockquote>
-<p><a href="https://github.com/martinzhou2015/SRCMS" target="_blank" rel="noopener">https://github.com/martinzhou2015/SRCMS</a></p>
-</blockquote>
-</blockquote>
-<h2 id="0x02-构建-lamp-Dcokerfile"><a href="#0x02-构建-lamp-Dcokerfile" class="headerlink" title="0x02 构建 lamp Dcokerfile"></a>0x02 构建 lamp Dcokerfile</h2><p>首先，我们需要有构建一个lamp 运行环境。</p>
-<blockquote>
-<p>Dockerfile</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"># 基础镜像为ubuntu:14.04</span><br><span class="line">FROM ubuntu:14.04</span><br><span class="line"></span><br><span class="line"># 作者为liusec</span><br><span class="line">MAINTAINER liusec &lt;75065472@qq.com&gt;</span><br><span class="line"></span><br><span class="line"># 替换apt源: 将/etc/apt/sources.list文件中的archive.ubuntu.com替换为mirrors.aliyun.com</span><br><span class="line">RUN sed -i &apos;s/archive.ubuntu.com/mirrors.aliyun.com/g&apos; /etc/apt/sources.list</span><br><span class="line"></span><br><span class="line"># 设置环境变量: 将env环境变量中的TZ设置为Asia/Shanghai</span><br><span class="line">ENV TZ=Asia/Shanghai</span><br><span class="line"></span><br><span class="line"># (1)设置本地时间：强制为/usr/share/zoneinfo/Asia/Shanghai文件创建符号链接（软链接）为/etc/localtime，-f为force</span><br><span class="line"># (2)设置时区：向文件/etc/timezone中写入字符串‘Asia/Shanghai’,更改时区为上海</span><br><span class="line">RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;&amp; echo $TZ &gt; /etc/timezone</span><br><span class="line"></span><br><span class="line"># 更新源</span><br><span class="line">RUN apt-get update -y</span><br><span class="line"></span><br><span class="line"># 安装apache、vim、bash-completion、unzip</span><br><span class="line">RUN apt-get install -y apache2 vim bash-completion unzip</span><br><span class="line"># 创建文件夹/var/lock/apache2 、/var/run/apache2</span><br><span class="line">RUN mkdir -p /var/lock/apache2 /var/run/apache2</span><br><span class="line"></span><br><span class="line"># 安装mysql-client、 mysql-server; 启动mysql服务; 设置mysql密码</span><br><span class="line">RUN apt-get install -y mysql-client mysql-server \</span><br><span class="line">    &amp;&amp; /etc/init.d/mysql start \</span><br><span class="line">    &amp;&amp; mysqladmin -u root password &quot;root&quot;</span><br><span class="line"></span><br><span class="line"># 安装php</span><br><span class="line">RUN apt-get install -y php5 php5-mysql php5-dev php5-gd php5-memcache php5-pspell php5-snmp snmp php5-xmlrpc libapache2-mod-php5 php5-cli</span><br><span class="line"># RUN yum install -y php php-mysql php-devel php-gd php-pecl-memcache php-pspell php-snmp php-xmlrpc php-xml</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 拷贝phpinfo.php 到docker镜像的/var/www/html/下</span><br><span class="line">COPY src/phpinfo.php /var/www/html/</span><br><span class="line"># 拷贝启动脚本start.sh 到docker镜像的根目录下</span><br><span class="line">COPY src/start.sh /start.sh</span><br><span class="line"># 增加启动脚本start.sh 所有用户和组的执行权限</span><br><span class="line">RUN chmod a+x /start.sh</span><br><span class="line"></span><br><span class="line"># 只开放了80 443端口的映射访问权限</span><br><span class="line">EXPOSE 80 443</span><br><span class="line"># 运行后默认执行start.sh启动脚本</span><br><span class="line">CMD [&quot;/start.sh&quot;]</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>src/start.sh</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">/etc/init.d/mysql start</span><br><span class="line">/etc/init.d/apache2 restart</span><br><span class="line">/usr/bin/tail -f /dev/null</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>src/phpinfo.php</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">phpinfo();</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="0x03-生成镜像，启动容器"><a href="#0x03-生成镜像，启动容器" class="headerlink" title="0x03 生成镜像，启动容器"></a>0x03 生成镜像，启动容器</h2><h3 id="3-1-在daocloud云端构建和启动容器"><a href="#3-1-在daocloud云端构建和启动容器" class="headerlink" title="3.1 在daocloud云端构建和启动容器"></a>3.1 在daocloud云端构建和启动容器</h3><p>将上述文件push到github项目中，lamp项目地址：</p>
-<p><a href="https://github.com/liusec/lamp" target="_blank" rel="noopener">https://github.com/liusec/lamp</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">├── Dcokerfile</span><br><span class="line">├── README.md</span><br><span class="line">└── src</span><br><span class="line">    ├── phpinfo.php</span><br><span class="line">    └── start.sh</span><br><span class="line"></span><br><span class="line">1 directory, 4 files</span><br></pre></td></tr></table></figure>
-<p>使用daocloud 关联github，自动构建lamp镜像，使用构建好的镜像启动容器进行测试。</p>
-<p>daocloud 云端测试截图：</p>
-<p><img src="http://p0naohs8x.bkt.clouddn.com/phpinfo.png" alt="phpinfo.png"></p>
-<h3 id="3-2-本地启动lamp容器测试"><a href="#3-2-本地启动lamp容器测试" class="headerlink" title="3.2 本地启动lamp容器测试"></a>3.2 本地启动lamp容器测试</h3><p>构建好的docker镜像已设置公开访问，希望在本地测试的小伙伴可以使用下面方法。</p>
-<ol>
-<li><p>拉取镜像到本地</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull daocloud.io/liusheng/lamp:master-98827dc</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d -p 8000:80 daocloud.io/liusheng/srcms_docker:latest</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><code>-p 8000:80</code> 前面的 8000 代表物理机的端口，可随意指定。</p>
-</blockquote>
-</li>
-<li><p>访问测试</p>
-<p><a href="http://127.0.0.1:8000/phpinfo.php" target="_blank" rel="noopener">http://127.0.0.1:8000/phpinfo.php</a></p>
-</li>
-</ol>
-<h2 id="0x04-创建srcms-docker-image"><a href="#0x04-创建srcms-docker-image" class="headerlink" title="0x04 创建srcms docker image"></a>0x04 创建srcms docker image</h2><p>在上一步lamp镜像的基础上，创建srcms的Dockerfile</p>
-<blockquote>
-<p>Dockerfile</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># 基础镜像为daocloud.io/liusheng/lamp</span><br><span class="line">FROM daocloud.io/liusheng/lamp:master-98827dc</span><br><span class="line"></span><br><span class="line"># 作者为liusec</span><br><span class="line">MAINTAINER liusec &lt;75065472@qq.com&gt;</span><br><span class="line"></span><br><span class="line">ARG SRCMS_URL=https://github.com/martinzhou2015/SRCMS/archive/master.zip</span><br><span class="line"></span><br><span class="line"># 解压srcms.zip 到 /var/www/html/下</span><br><span class="line">RUN set -x \</span><br><span class="line">    &amp;&amp; apt-get update \</span><br><span class="line">    &amp;&amp; apt-get install -y --force-yes wget \</span><br><span class="line">    &amp;&amp; wget -qO /tmp/srcms.zip $SRCMS_URL \</span><br><span class="line">    &amp;&amp; unzip -q /tmp/srcms.zip -d /tmp/ \</span><br><span class="line">    &amp;&amp; mv /tmp/SRCMS-master/* /var/www/html/ \</span><br><span class="line">    &amp;&amp; rm -rf /tmp/SRCMS-master</span><br><span class="line"></span><br><span class="line"># 创建数据库srcms ，导入sql</span><br><span class="line"># 修改接收邮件的邮箱</span><br><span class="line">RUN set -x \</span><br><span class="line">    &amp;&amp; chown -R www-data:www-data /var/www/html/ \</span><br><span class="line">    &amp;&amp; /etc/init.d/mysql start \</span><br><span class="line">    &amp;&amp; mysql -e &quot;CREATE DATABASE srcms DEFAULT CHARACTER SET utf8;&quot; -uroot -proot \</span><br><span class="line">    &amp;&amp; mysql -e &quot;use srcms;source /var/www/html/DB/srcms.sql;&quot; -uroot -proot \</span><br><span class="line">    &amp;&amp; rm -f /var/www/html/DB/srcms.sql \</span><br><span class="line">    &amp;&amp; sed -i &apos;s/1009465756@qq.com/75065472@qq.com/g&apos; /var/www/html/Application/User/Controller/PostController.class.php</span><br><span class="line"></span><br><span class="line">COPY src/start.sh /start.sh</span><br><span class="line">RUN chmod a+x /start.sh</span><br><span class="line"></span><br><span class="line">EXPOSE 80</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>src/start.sh</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line">/etc/init.d/mysql restart</span><br><span class="line">/etc/init.d/apache2 restart</span><br><span class="line">/usr/bin/tail -f /dev/null</span><br></pre></td></tr></table></figure>
-<h2 id="0x05-生成镜像，启动运行"><a href="#0x05-生成镜像，启动运行" class="headerlink" title="0x05 生成镜像，启动运行"></a>0x05 生成镜像，启动运行</h2><h3 id="5-1-在云端启动docker容器"><a href="#5-1-在云端启动docker容器" class="headerlink" title="5.1 在云端启动docker容器"></a>5.1 在云端启动docker容器</h3><p>将上面所述文件push到github项目,srcms_docker项目地址：</p>
-<p><a href="https://github.com/liusec/srcms_docker" target="_blank" rel="noopener">https://github.com/liusec/srcms_docker</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">├── Dockerfile</span><br><span class="line">├── README.md</span><br><span class="line">└── src</span><br><span class="line">    └── start.sh</span><br><span class="line"></span><br><span class="line">1 directory, 3 files</span><br></pre></td></tr></table></figure>
-<p>使用daocloud 自动构建，启动服务</p>
-<p><img src="http://p0naohs8x.bkt.clouddn.com/srcms_index.png" alt="srcms_index.png"></p>
-<h3 id="5-2-在本地启动docker容器"><a href="#5-2-在本地启动docker容器" class="headerlink" title="5.2 在本地启动docker容器"></a>5.2 在本地启动docker容器</h3><p>希望在本地部署的小伙伴可以将docker镜像拉取到本地启动，方法如下</p>
-<ol>
-<li><p>拉取镜像到本地</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull daocloud.io/liusheng/srcms_docker:latest</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>启动环境</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d -p 8000:80 daocloud.io/liusheng/srcms_docker:latest</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><code>-p 8000:80</code> 前面的 8000 代表物理机的端口，可随意指定。 </p>
-</blockquote>
-</li>
-<li><p>访问SRCMS</p>
-<p><a href="http://127.0.0.1:8000/index.php" target="_blank" rel="noopener">http://127.0.0.1:8000/index.php</a></p>
-<p><img src="http://p0naohs8x.bkt.clouddn.com/srcms_index.png" alt="srcms_index.png"></p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/08/使用Docker 部署 SRCMS/" rel="next" title="使用Docker 部署 SRCMS">
+                <i class="fa fa-chevron-left"></i> 使用Docker 部署 SRCMS
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -759,10 +553,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -770,6 +565,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -790,8 +589,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -864,6 +672,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01-常见编码类型"><span class="nav-number">1.</span> <span class="nav-text"><a href="#0x01-&#x5E38;&#x89C1;&#x7F16;&#x7801;&#x7C7B;&#x578B;" class="headerlink" title="0x01 &#x5E38;&#x89C1;&#x7F16;&#x7801;&#x7C7B;&#x578B;"></a>0x01 &#x5E38;&#x89C1;&#x7F16;&#x7801;&#x7C7B;&#x578B;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x02-ASCII"><span class="nav-number">2.</span> <span class="nav-text"><a href="#0x02-ASCII" class="headerlink" title="0x02 ASCII"></a>0x02 ASCII</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x03-GBK"><span class="nav-number">3.</span> <span class="nav-text"><a href="#0x03-GBK" class="headerlink" title="0x03 GBK"></a>0x03 GBK</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x04-乱码"><span class="nav-number">4.</span> <span class="nav-text"><a href="#0x04-&#x4E71;&#x7801;" class="headerlink" title="0x04 &#x4E71;&#x7801;"></a>0x04 &#x4E71;&#x7801;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x05-UNICODE"><span class="nav-number">5.</span> <span class="nav-text"><a href="#0x05-UNICODE" class="headerlink" title="0x05 UNICODE"></a>0x05 UNICODE</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储问题"><span class="nav-number">5.1.</span> <span class="nav-text"><a href="#&#x5B58;&#x50A8;&#x95EE;&#x9898;" class="headerlink" title="&#x5B58;&#x50A8;&#x95EE;&#x9898;"></a>&#x5B58;&#x50A8;&#x95EE;&#x9898;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多种存储方式"><span class="nav-number">5.2.</span> <span class="nav-text"><a href="#&#x591A;&#x79CD;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;" class="headerlink" title="&#x591A;&#x79CD;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;"></a>&#x591A;&#x79CD;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x06-UTF-8-编码规则"><span class="nav-number">6.</span> <span class="nav-text"><a href="#0x06-UTF-8-&#x7F16;&#x7801;&#x89C4;&#x5219;" class="headerlink" title="0x06 UTF-8 &#x7F16;&#x7801;&#x89C4;&#x5219;"></a>0x06 UTF-8 &#x7F16;&#x7801;&#x89C4;&#x5219;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x07-BOM（Byte-Order-Mask）"><span class="nav-number">7.</span> <span class="nav-text"><a href="#0x07-BOM&#xFF08;Byte-Order-Mask&#xFF09;" class="headerlink" title="0x07 BOM&#xFF08;Byte Order Mask&#xFF09;"></a>0x07 BOM&#xFF08;Byte Order Mask&#xFF09;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x08-编码测试"><span class="nav-number">8.</span> <span class="nav-text"><a href="#0x08-&#x7F16;&#x7801;&#x6D4B;&#x8BD5;" class="headerlink" title="0x08 &#x7F16;&#x7801;&#x6D4B;&#x8BD5;"></a>0x08 &#x7F16;&#x7801;&#x6D4B;&#x8BD5;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x09-编码绕过-SQL宽字节注入"><span class="nav-number">9.</span> <span class="nav-text"><a href="#0x09-&#x7F16;&#x7801;&#x7ED5;&#x8FC7;-SQL&#x5BBD;&#x5B57;&#x8282;&#x6CE8;&#x5165;" class="headerlink" title="0x09 &#x7F16;&#x7801;&#x7ED5;&#x8FC7;-SQL&#x5BBD;&#x5B57;&#x8282;&#x6CE8;&#x5165;"></a>0x09 &#x7F16;&#x7801;&#x7ED5;&#x8FC7;-SQL&#x5BBD;&#x5B57;&#x8282;&#x6CE8;&#x5165;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x10-iconv-转换字符集造成截断"><span class="nav-number">10.</span> <span class="nav-text"><a href="#0x10-iconv-&#x8F6C;&#x6362;&#x5B57;&#x7B26;&#x96C6;&#x9020;&#x6210;&#x622A;&#x65AD;" class="headerlink" title="0x10 iconv()&#x8F6C;&#x6362;&#x5B57;&#x7B26;&#x96C6;&#x9020;&#x6210;&#x622A;&#x65AD;"></a>0x10 iconv()&#x8F6C;&#x6362;&#x5B57;&#x7B26;&#x96C6;&#x9020;&#x6210;&#x622A;&#x65AD;</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x11-参考链接"><span class="nav-number">11.</span> <span class="nav-text"><a href="#0x11-&#x53C2;&#x8003;&#x94FE;&#x63A5;" class="headerlink" title="0x11 &#x53C2;&#x8003;&#x94FE;&#x63A5;"></a>0x11 &#x53C2;&#x8003;&#x94FE;&#x63A5;</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -997,6 +821,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
