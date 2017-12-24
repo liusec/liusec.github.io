@@ -82,19 +82,19 @@
 
 
 
-<meta name="description" content="0x01 常见编码类型常见编码：  ASCII GBK GB2312 UNICODE UTF-8 UTF-16 url编码 hex编码 base64编码  这篇文章不涉及url编码、hex编码、base64编码，后面有时间再补充。 0x02 ASCII所有信息最终都是一个二进制值。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就可以组合出256种状态，这被称为一个字节（byte） 一个">
+<meta name="description" content="0x01 常见编码类型常见编码：  ASCII GBK GB2312 UNICODE UTF-8 UTF-16 url编码 hex编码 base64编码  这篇文章不涉及url编码、hex编码、base64编码，后面有时间再补充。 0x02 ASCII所有信息最终都是一个二进制值。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就可以组合出256种状态，这被称为一个字节（byte）。一个">
 <meta name="keywords" content="编码,代码审计">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编码转换">
 <meta property="og:url" content="https://liusec.github.io/2017/12/24/编码转换/index.html">
 <meta property="og:site_name" content="liusec&#39;s blog">
-<meta property="og:description" content="0x01 常见编码类型常见编码：  ASCII GBK GB2312 UNICODE UTF-8 UTF-16 url编码 hex编码 base64编码  这篇文章不涉及url编码、hex编码、base64编码，后面有时间再补充。 0x02 ASCII所有信息最终都是一个二进制值。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就可以组合出256种状态，这被称为一个字节（byte） 一个">
+<meta property="og:description" content="0x01 常见编码类型常见编码：  ASCII GBK GB2312 UNICODE UTF-8 UTF-16 url编码 hex编码 base64编码  这篇文章不涉及url编码、hex编码、base64编码，后面有时间再补充。 0x02 ASCII所有信息最终都是一个二进制值。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就可以组合出256种状态，这被称为一个字节（byte）。一个">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://liusec.github.io/2017/12/24/编码转换/ASCII_Table.png">
-<meta property="og:updated_time" content="2017-12-24T00:57:31.000Z">
+<meta property="og:updated_time" content="2017-12-24T01:06:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编码转换">
-<meta name="twitter:description" content="0x01 常见编码类型常见编码：  ASCII GBK GB2312 UNICODE UTF-8 UTF-16 url编码 hex编码 base64编码  这篇文章不涉及url编码、hex编码、base64编码，后面有时间再补充。 0x02 ASCII所有信息最终都是一个二进制值。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就可以组合出256种状态，这被称为一个字节（byte） 一个">
+<meta name="twitter:description" content="0x01 常见编码类型常见编码：  ASCII GBK GB2312 UNICODE UTF-8 UTF-16 url编码 hex编码 base64编码  这篇文章不涉及url编码、hex编码、base64编码，后面有时间再补充。 0x02 ASCII所有信息最终都是一个二进制值。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就可以组合出256种状态，这被称为一个字节（byte）。一个">
 <meta name="twitter:image" content="https://liusec.github.io/2017/12/24/编码转换/ASCII_Table.png">
 
 
@@ -412,11 +412,9 @@
 <li>base64编码</li>
 </ul>
 <p>这篇文章不涉及url编码、hex编码、base64编码，后面有时间再补充。</p>
-<h1 id="0x02-ASCII"><a href="#0x02-ASCII" class="headerlink" title="0x02 ASCII"></a>0x02 ASCII</h1><p>所有信息最终都是一个二进制值。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就可以组合出256种状态，这被称为一个字节（byte）</p>
-<p>一个字节一共可以用来表示256种不同的状态，每一个状态对应一个符号，就是256个符号，从00000000到11111111</p>
+<h1 id="0x02-ASCII"><a href="#0x02-ASCII" class="headerlink" title="0x02 ASCII"></a>0x02 ASCII</h1><p>所有信息最终都是一个二进制值。每一个二进制位（bit）有0和1两种状态，因此八个二进制位就可以组合出256种状态，这被称为一个字节（byte）。一个字节一共可以用来表示256种不同的状态，每一个状态对应一个符号，就是256个符号，从00000000到11111111。</p>
 <p>上个世纪60年代，美国制定了一套字符编码，对英语字符与二进制位之间的关系，做了统一规定。这被称为 ASCII 码，一直沿用至今。</p>
-<p>ASCII 码一共规定了128个字符的编码</p>
-<p>这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的一位统一规定为0。</p>
+<p>ASCII 码一共规定了128个字符的编码，这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的一位统一规定为0。</p>
 <p>ASCII 码表：</p>
 <p><img src="/2017/12/24/编码转换/ASCII_Table.png" alt="编码转换/ASCII_Table.png"></p>
 <p>python 显示 ASCII 码表（10进制 对应 字符表）:</p>
